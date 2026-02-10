@@ -1,0 +1,14 @@
+package demo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Product> products = new ArrayList();
+		products.add(new Product(1, "whey", 3400));
+		products.add(new Product(2, "creatine", 1100));
+		products.add(new Product(3, "fish oil", 700));
+	}
+}

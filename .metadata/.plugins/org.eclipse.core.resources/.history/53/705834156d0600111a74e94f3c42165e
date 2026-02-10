@@ -1,0 +1,30 @@
+package demo;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+public class Main {
+
+	public static void main(String[] args) {
+		List<Product> products = new ArrayList<Product>();
+		products.add(new Product(1, "whey", 3400));
+		products.add(new Product(2, "creatine", 1100));
+		products.add(new Product(3, "fish oil", 700));
+
+//		Comparator<Product> cc = new Comparator<Product>() {
+//
+//			@Override
+//			public int compare(Product o1, Product o2) {
+//				if (o1.exp > o2.exp)
+//					return -1;
+//				else
+//					return 1;
+//			}
+//
+//		};
+		
+		System.out.println(products);
+
+	}
+}
