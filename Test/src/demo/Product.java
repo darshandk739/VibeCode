@@ -1,14 +1,11 @@
 package demo;
 
-public class Product {
-
-
+public class Product implements Comparable<Product> {
 
 	int id;
 	String name;
 	int exp;
-	
-	
+
 	public Product(int id, String name, int exp) {
 		super();
 		this.id = id;
@@ -16,10 +13,17 @@ public class Product {
 		this.exp = exp;
 	}
 
-
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", name=" + name + ", exp=" + exp + "]";
+	}
+
+	@Override
+	public int compareTo(Product p) {
+		if (this.exp > p.exp)
+			return 1;
+		else
+			return -1;
 	}
 
 }

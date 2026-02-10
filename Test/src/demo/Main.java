@@ -1,6 +1,7 @@
 package demo;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -12,18 +13,14 @@ public class Main {
 		products.add(new Product(2, "creatine", 1100));
 		products.add(new Product(3, "fish oil", 700));
 
-		Comparator<Product> cc = new Comparator<Product>() {
-          
-			@Override
-			public int compare(Product o1, Product o2) {
-				if (o1.exp > o2.exp)
-					return 1;
-				else
-					return -1;
-			}
-
-		};
-
+		
+		
+		
+		Comparator<Product> cc = ( i, j) ->  i.exp>j.exp?1:-1;
+			
+		
+    Collections.sort(products);
+    
 		for (Product p : products) {
 			System.out.println(p);
 		}
